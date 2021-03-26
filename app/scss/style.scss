@@ -422,6 +422,9 @@
 
 .product-item {
     max-width: 370px;
+    &.product-item--list {
+        min-width: 100%;
+    }
     &__img-box {
         height: 370px;
         width: 370px;
@@ -970,4 +973,72 @@
         border: 1px solid $default;
         padding: 10px 20px;
     }
+}
+
+.shop-content {
+    width: 100%;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .product-item {
+            margin-bottom: 40px;
+        }
+    }
+    &__filter {
+        border: 1px solid #ececec;
+        padding: 20px 25px 20px 30px;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__filter-buttons {
+        line-height: 0;
+        display: flex;
+        align-items: center;
+    }
+    &__filter-btn {
+        outline: transparent;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        margin-left: 15px;
+        cursor: pointer;
+        &.shop-content__filter-btn--active {
+            path {
+                fill: $accent;
+            }
+        }
+    }
+}
+
+.jq-selectbox__select {
+    margin-left: 30px;
+    height: 32px;
+    padding: 0 30px 0 0;
+    border: none;
+    border-bottom-color: #B3B3B3;
+    color: $default;
+    background: transparent;
+    box-shadow: none;
+    text-shadow: none;
+    @extend %quicksand-500;
+    &:hover {
+        background: transparent;
+    }
+}
+
+.jq-selectbox__trigger {
+    border-left: none;
+}
+
+.jq-selectbox__trigger-arrow {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 10px;
+    height: 5px;
+    border: none;
+    background-image: url('../images/icon/angle-down.svg');
 }
