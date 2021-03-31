@@ -661,6 +661,16 @@
         z-index: -1;
     }
     
+    .blog-box {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        &__author {
+            margin-right: 30px;
+        }
+        &__date {}
+    }
+    
     .modal {
         max-width: 570px;
         margin: 0 auto 115px;
@@ -1473,5 +1483,51 @@
             .product-item__title {
                 padding: 5px 0;
             }
+        }
+    }
+    
+    .blog-page {
+        padding: 120px 0 60px;
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__item-link {
+            display: block;
+            color: inherit;
+            color: $title;
+            font-family: inherit;
+            font-size: inherit;
+            &:hover {
+                color: $accent;
+            }
+        }
+        &__img {
+            max-width: 770px;
+            height: 450px;
+            object-fit: cover;
+            display: block;
+        }
+        &__item-box {
+            border: 1px solid #ececec;
+            border-top: none;
+            padding: 40px;
+        }
+        &__content {
+            width: 770px;
+            margin-right: 30px;
+        }
+        &__aside {
+            width: 370px;
+        }
+        &__item {
+            margin-bottom: 60px;
+        }
+        &__item-title {
+            color: $title;
+            margin-bottom: 20px;
+            font-size: 22px;
+            @extend %roboto-700;
+            line-height: 32px;
         }
     }
